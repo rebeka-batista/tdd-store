@@ -14,7 +14,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.devsuperior.bds01.dto.EmployeeDTO;
+import com.devsuperior.bds01.dto.EmployeeDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
@@ -45,7 +45,7 @@ public class EmployeeControllerIT {
 	@Test
 	public void insertShouldInsertResource() throws Exception {
 
-		EmployeeDTO dto = new EmployeeDTO(null, "Joaquim", "joaquim@gmail.com", 1L);
+		EmployeeDto dto = new EmployeeDto(null, "Joaquim", "joaquim@gmail.com", 1L);
 		String jsonBody = objectMapper.writeValueAsString(dto);
 		
 		ResultActions result =

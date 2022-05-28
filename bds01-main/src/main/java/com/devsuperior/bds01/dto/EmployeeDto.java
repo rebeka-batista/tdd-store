@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 import com.devsuperior.bds01.entities.Employee;
 
-public class EmployeeDTO implements Serializable {
+public class EmployeeDto implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
@@ -12,17 +12,17 @@ public class EmployeeDTO implements Serializable {
 	private String email;
 	private Long departmentId;
 	
-	public EmployeeDTO() {
+	public EmployeeDto() {
 	}
 
-	public EmployeeDTO(Long id, String name, String email, Long departmentId) {
+	public EmployeeDto(Long id, String name, String email, Long departmentId) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.departmentId = departmentId;
 	}
 
-	public EmployeeDTO(Employee entity) {
+	public EmployeeDto(Employee entity) {
 		id = entity.getId();
 		name = entity.getName();
 		email = entity.getEmail();
